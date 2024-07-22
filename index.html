@@ -3,6 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>(´･ω･`)</title>
+    <script>
+      function blinkTitle() {
+        let titles = ["(´･ω･`)", "(´-ω-`)"];
+        let currentIndex = 0;
+
+        setInterval(() => {
+          if (Math.random() < 0.1) {
+            let blinkTwice = Math.random() < 0.3;
+
+            if (blinkTwice) {
+              document.title = titles[1];
+              setTimeout(() => {
+                document.title = titles[0];
+                setTimeout(() => {
+                  document.title = titles[1];
+                  setTimeout(() => {
+                    document.title = titles[0];
+                  }, 300);
+                }, 200);
+              }, 300);
+            } else {
+              document.title = titles[1];
+              setTimeout(() => {
+                document.title = titles[0];
+              }, 500);
+            }
+          }
+        }, 1000);
+      }
+
+      window.onload = blinkTitle;
+    </script>
     <link rel="shortcut icon" href="./Pictures/icon_256x256.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="./Pictures/icon_256x256.ico">
     <style>
