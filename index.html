@@ -10,27 +10,12 @@
 
         setInterval(() => {
           if (Math.random() < 0.1) {
-            let blinkTwice = Math.random() < 0.3;
-
-            if (blinkTwice) {
-              document.title = titles[1];
-              setTimeout(() => {
-                document.title = titles[0];
-                setTimeout(() => {
-                  document.title = titles[1];
-                  setTimeout(() => {
-                    document.title = titles[0];
-                  }, 300);
-                }, 200);
-              }, 300);
-            } else {
-              document.title = titles[1];
-              setTimeout(() => {
-                document.title = titles[0];
-              }, 500);
-            }
+            document.title = titles[1];
+            setTimeout(() => {
+              document.title = titles[0];
+            }, 500);
           }
-        }, 1000);
+        }, 1500);
       }
 
       window.onload = blinkTitle;
