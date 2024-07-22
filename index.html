@@ -9,13 +9,11 @@
         let currentIndex = 0;
 
         setInterval(() => {
-          if (Math.random() < 0.1) {
-            document.title = titles[1];
-            setTimeout(() => {
-              document.title = titles[0];
-            }, 500);
-          }
-        }, 1500);
+          document.title = titles[1];
+          setTimeout(() => {
+            document.title = titles[0];
+          }, 500);
+        }, 10000);
       }
 
       window.onload = blinkTitle;
