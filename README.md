@@ -1,2 +1,2 @@
 # reyreyy.github.io
-qwq
+So far, this item has only been used for redirection.
